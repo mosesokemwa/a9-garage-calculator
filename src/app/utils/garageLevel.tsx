@@ -28,7 +28,6 @@ export const A9GarageLevelInfoData: A9GarageLevelInfoDataInterface = {
 };
 
 
-
 const sumUptoCurrentGarageLevelMinusOne = (garageLevel: number) => {
   let totalValue: number = 0;
   for (let level = 1; level < garageLevel; level++) {
