@@ -51,28 +51,27 @@ export default function A9Form() {
                     src="/asphalt_9_legend.svg"
                     alt="Asphalt 9"
                     width={600}
-                    height={400}
+                    height={300}
                     style={{ display: "flex !important" }}
-                    loading="lazy" />
+                    priority={true}/>
             </div>
             <div className='mt-2 flex items-center justify-center'>
-                <div className='flex p-8 m-5 max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-100 dark:border-gray-100 dark:hover:bg-gray-100 '>
-
+                <div className='flex p-10 max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-100 dark:border-gray-100 dark:hover:bg-gray-100 '>
                     <form>
                         <div className="space-y-12">
                             <div className="border-b border-gray-900/10 pb-6">
                                 <h1 className="text-base font-semibold leading-7 text-gray-900 underline">A9 Garage Value Calculator</h1>
 
                                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                                    <FormInput label="Player ID" value={playerId} onChange={e => setPlayerId(e.target.value)} />
+                                    {/* <FormInput label="Player ID" value={playerId} onChange={e => setPlayerId(e.target.value)} /> */}
                                     <FormInput label="Garage Level: 1 - 18" value={garageLevel} onChange={e => setGarageLevel(Number(e.target.value))} />
                                     <FormInput label="Garage Value" value={garageValue} onChange={(e) => setGarageValue(Number(e.target.value))} />
                                 </div>
                             </div>
 
                             <button
-                                type="submit"
-                                className='bg-blue-600 hover:bg-blue-700 duration-300 text-white shadow p-2 rounded-r'
+                                type="button"
+                                className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                                 onClick={handleCalculate}>
                                 Calculate
                             </button>
